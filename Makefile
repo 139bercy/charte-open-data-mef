@@ -27,4 +27,4 @@ release:
 	./scripts/release.sh src/main.md
 
 template:
-	./scripts/to-docx.sh src/templates/project.md data-economie-gabarit-projet
+	./scripts/to-odt.sh src/templates/project.md data-economie-gabarit-projet

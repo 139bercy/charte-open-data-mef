@@ -1,7 +1,6 @@
 # Direction - Nom du projet
 
-Ce document est une aide au cadrage des projets Open Data émise par le Bercy Hub. Adaptez-le à vos besoins et
-contactez-nous pour toute question ou suggestion !
+Ce document est une aide au cadrage des projets Open Data émise par le Bercy Hub. Adaptez-le à vos besoins et contactez-nous pour toute question ou suggestion !
 
 ## Révisions
 
