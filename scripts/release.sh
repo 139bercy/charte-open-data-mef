@@ -1,4 +1,4 @@
-#!/bin/bash
+set -e
 
 FILE=$1
 BRANCH="$(git symbolic-ref --short -q HEAD)"
@@ -16,7 +16,7 @@ export_pdf () {
     --template scripts/templates/default.tex \
     --metadata TITLE="$TITLE" \
     --metadata VERSION="$VERSION" \
-    --resource-path=.:src/media/
+    --resource-path=.:src/media/ || { echo "Error producing PDF."; exit 1; }
 }
 
 export_tex () {
@@ -26,7 +26,7 @@ export_tex () {
     --template scripts/templates/default.tex \
     --metadata TITLE="$TITLE" \
     --metadata VERSION="$VERSION" \
-    --resource-path=.:./src/media/
+    --resource-path=.:./src/media/ || { echo "Error producing TeX."; exit 1; }
 }
 
 export_docx () {
@@ -35,14 +35,14 @@ export_docx () {
     --from markdown-yaml_metadata_block \
     --css=style.css \
     --standalone \
-    --resource-path=.:src:media:./src/media/
+    --resource-path=.:src:media:./src/media/ || { echo "Error producing DOCX."; exit 1; }
 }
 
 export_odt () {
   echo Export content to "$FILENAME.odt"
   pandoc "$FILE" --reference-doc=scripts/templates/default.ott -o "build/$FILENAME".odt \
     --metadata version="$VERSION" \
-    --resource-path=.:src:media:./src/media/
+    --resource-path=.:src:media:./src/media/ || { echo "Error producing ODT."; exit 1; }
 }
 
 export_odt

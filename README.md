@@ -14,11 +14,11 @@ En responsabilisant les producteurs de données sur la clarté des métadonnées
 
 ## Usage
 
-Le document est téléchargeable [ici](https://github.com/139bercy/data-economie-policies-and-use/releases) au format `PDF` ainsi qu'au format `DOCX`.
+Le document est téléchargeable [ici](https://github.com/139bercy/charte-open-data-mef/releases) au format `PDF` ainsi qu'au format `DOCX`.
 
 La version de la `release` en cours est sur la branche `main`, la version de travail en cours de modification est sur la branche `develop`.
 
-Les fichiers sources de chaque branche sont consultables dans le dossier [`src`](https://github.com/139bercy/data-economie-policies-and-use/tree/main/src/main.md).
+Les fichiers sources de chaque branche sont consultables dans le dossier [`src`](https://github.com/139bercy/charte-open-data-mef/tree/main/src/main.md).
 
 ## Choix du format
 
@@ -40,11 +40,16 @@ $ source venv/bin/activate
 $ pip install -r requirements.txt
 ```
 
-Ajouter au `.bashrc`:
+Copier le template d'environnement :
 
+```bash
+$ cp .env.example .env
 ```
-export PATH=<chemin absolu vers tex live>:"${PATH}"
-export DATA_ECO_POLICIES_TOKEN=<token git>
+
+Éditer le fichier `.env` pour y ajouter votre token GitHub :
+
+```text
+DATA_ECO_POLICIES_TOKEN=ghp_votre_token_ici
 ```
 
 ### Exports DOCX et PDF
