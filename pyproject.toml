@@ -45,7 +45,7 @@ default_bump_level = 0
 name = "origin"
 type = "github"
 token = { env = "DATA_ECO_POLICIES_TOKEN" }
-ignore_token_for_push = false
+ignore_token_for_push = true
 insecure = false
 
 [semantic_release.publish]
