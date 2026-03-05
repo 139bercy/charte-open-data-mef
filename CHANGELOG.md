@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## v1.1.1 (2026-03-05)
+
+### Chore
+
+- chore: add tag without release ([`9fc3663`](https://github.com/139bercy/charte-open-data-mef/commit/9fc3663eb96f2a89a5a191a2bb416aca73afa79a))
+
+- chore: handle semantic release token ([`420a40c`](https://github.com/139bercy/charte-open-data-mef/commit/420a40cc1c1b84db299b35babc8d0b1550a6ad05))
+
+### Documentation
+
+- docs: update readme and add license ([`3d90026`](https://github.com/139bercy/charte-open-data-mef/commit/3d900269e9249da096ac1709b3ceef14ce87fc30))
+
 ## v1.1.0 (2026-03-05)
 
 ### Chore
