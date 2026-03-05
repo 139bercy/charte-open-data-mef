@@ -17,6 +17,17 @@ minor:
 major:
 	semantic-release version --major
 
+## Tag-only (no release)
+
+patch-tag:
+	semantic-release version --patch --no-vcs-release
+
+minor-tag:
+	semantic-release version --minor --no-vcs-release
+
+major-tag:
+	semantic-release version --major --no-vcs-release
+
 ## Content management
 
 toc:
