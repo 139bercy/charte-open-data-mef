@@ -20,6 +20,81 @@ La version de la `release` en cours est sur la branche `main`, la version de tra
 
 Les fichiers sources de chaque branche sont consultables dans le dossier [`src`](https://github.com/139bercy/charte-open-data-mef/tree/main/src/main.md).
 
+## Résumé
+
+### Avant publication
+
+- Contacter la mission AMDAC pour obtenir un compte (agents MEF uniquement)
+- Valider l'absence de données sensibles ou confidentielles
+- En cas de doute, saisir le DPO ou contacter la mission AMDAC
+- **Rappel** : tout jeu publié en public est automatiquement moissonné par data.gouv.fr
+
+### Format des fichiers
+
+- Formats autorisés : `CSV`, `JSON`, `XML`, `TXT` (formats ouverts)
+- Formats à éviter : `docx`, `xlsx`, `PDF`, `zip`, `rar`
+- Encodage : **UTF-8** obligatoire
+- CSV : séparateur **point-virgule** (`;`), jamais de virgule
+- Header en première ligne, sans espaces (privilégier `_`)
+- Pas de colonnes/lignes vides, pas de cellules fusionnées
+
+### Normalisation des valeurs
+
+- Dates : **ISO 8601** → `AAAA-MM-JJ HH:MM:SS`
+- Cellules vides : remplacer par `NA`, `NC` ou `NULL` (documenter dans les métadonnées)
+- Unités de mesure : cohérentes et documentées
+- Pas de formules dans les cellules (types simples uniquement)
+- Pas de séparateurs de milliers
+
+### Identifiant et nom du jeu de données
+
+- Définir avant publication, **jamais modifier après mise en production**
+- Utiliser le **tiret court** (`-`), pas le tiret bas
+- Préfixe commun pour un même ensemble de datasets
+- Environnements : `test-<nom>`, `preprod-<nom>`, `<nom>` = production
+- Accès restreint : `<env>-restreint-<nom>`, `<env>-interne-<nom>`
+- Utiliser la même nomenclature d'une année sur l'autre pour faciliter la recherche
+- Exemple : `plf-2025-depenses-comptes-speciaux`
+
+### Versionnement (SemVer 2.0.0) à indiquer dans le titre
+
+- Format : `<majeure>.<mineure>.<patch>`
+- Majeure = changement de schéma structurel
+- Mineure = ajout de colonnes ou de données compatibles
+- Patch = correction d'erreurs
+- Documenter les changements : `CHANGELOG.txt` en pièce jointe ou en description
+- Activer `Mettre à jour la date après un traitement des données` dans les infos du jeu
+- Exemple : `Prix des contrôles techniques - v2.0.3`
+
+### Jeux millésimés
+
+- Privilégier **un seul jeu avec historique** + champ `année`
+- Ne créer un jeu par année que si le schéma change radicalement
+- Pour les fichiers > 5 Go : garder `n` années en base, années précédentes en pièce jointe
+
+### Métadonnées obligatoires
+
+| Champ                     | Détail                                 |
+| ------------------------- | -------------------------------------- |
+| **Titre**                 | 5 à 10 mots, explicite                 |
+| **Description**           | 300 à 500 caractères                   |
+| **Producteur**            | Direction responsable                  |
+| **Contact**               | Email fonctionnel (BALF privilégiée)   |
+| **Mots-clés**             | 3 à 7 termes                           |
+| **Licence**               | Par défaut `Licence Ouverte v2.0`      |
+| **Fréquence**             | Hebdo / mensuel / trimestriel / annuel |
+| **Couverture spatiale**   | Zone géographique                      |
+| **Couverture temporelle** | Période couverte                       |
+| **Thématique**            | Catégorie taxonomie portail            |
+
+### Import
+
+- Importer en **source** (pas en pièce jointe) → accès API, export, exploration
+- Onglet `Traitement` : typer chaque champ, définir les facettes
+- Limite : **500 colonnes** maximum
+
+______________________________________________________________________
+
 ## Choix du format
 
 Les fichiers de travail sont au format [Markdown](https://docs.framasoft.org/fr/grav/markdown.html).
