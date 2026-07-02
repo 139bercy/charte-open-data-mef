@@ -70,20 +70,20 @@
                         <div class="fr-header__brand-top">
                             <div class="fr-header__logo">
                                 <p class="fr-logo">
-                                    République<br>Française
+                                    Gouvernement
                                 </p>
                             </div>
                             <div class="fr-header__navbar">
-                                <button class="fr-btn--display fr-btn" aria-controls="fr-theme-modal" data-fr-opened="false" title="Paramètres d'affichage" id="button-display-mobile">
-                                    Paramètres d'affichage
+                                <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="modal-navigation" aria-haspopup="menu" id="button-menu" title="Menu">
+                                    Menu
                                 </button>
                             </div>
                         </div>
                         <div class="fr-header__service">
-                            <a href="https://data.economie.gouv.fr" title="Accueil - data.economie.gouv.fr">
+                            <a href="https://data.economie.gouv.fr/pages/accueil/" title="Accueil - data.economie.gouv.fr">
                                 <p class="fr-header__service-title">data.economie.gouv.fr</p>
                             </a>
-                            <p class="fr-header__service-tagline">La plateforme Open Data des ministères économiques et financiers</p>
+                            <p class="fr-header__service-tagline">Le site des données du ministère de l’Économie, des Finances et de l’Industrie et du ministère chargé du Budget et des Comptes publics</p>
                         </div>
                     </div>
                     <div class="fr-header__tools">
@@ -100,6 +100,37 @@
                 </div>
             </div>
         </div>
+        <!-- Menu de navigation principal -->
+        <div class="fr-header__menu fr-modal" id="modal-navigation" aria-labelledby="button-menu">
+            <div class="fr-container">
+                <button class="fr-btn--close fr-btn" aria-controls="modal-navigation" title="Fermer">
+                    Fermer
+                </button>
+                <div class="fr-header__menu-links"></div>
+                <nav class="fr-nav" id="navigation-menu" role="navigation" aria-label="Menu principal">
+                    <ul class="fr-nav__list">
+                        <li class="fr-nav__item">
+                            <a class="fr-nav__link" href="https://data.economie.gouv.fr/explore" target="_self">Données</a>
+                        </li>
+                        <li class="fr-nav__item">
+                            <a class="fr-nav__link" href="https://data.economie.gouv.fr/pages/catalogue-visualisations/" target="_self">Visualisations</a>
+                        </li>
+                        <li class="fr-nav__item">
+                            <a class="fr-nav__link" href="https://data.economie.gouv.fr/map/" target="_self">Création de carte</a>
+                        </li>
+                        <li class="fr-nav__item">
+                            <a class="fr-nav__link" href="https://data.economie.gouv.fr/chart/" target="_self">Création de graphique</a>
+                        </li>
+                        <li class="fr-nav__item">
+                            <a class="fr-nav__link" href="https://data.economie.gouv.fr/api-console/" target="_self">API</a>
+                        </li>
+                        <li class="fr-nav__item">
+                            <a class="fr-nav__link" href="https://data.economie.gouv.fr/pages/demarche0/" target="_self">Démarche</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 
     <div class="fr-container">
@@ -108,7 +139,7 @@
             <div class="fr-collapse" id="breadcrumb-1">
                 <ol class="fr-breadcrumb__list">
                     <li>
-                        <a class="fr-breadcrumb__link" href="https://data.economie.gouv.fr">Accueil</a>
+                        <a class="fr-breadcrumb__link" href="https://data.economie.gouv.fr/pages/accueil/">Accueil</a>
                     </li>
                     <li>
                         <a class="fr-breadcrumb__link" aria-current="page">{{title}}</a>
@@ -149,9 +180,11 @@
         <div class="fr-container">
             <div class="fr-footer__body">
                 <div class="fr-footer__brand fr-enlarge-link">
-                    <p class="fr-logo">
-                        République<br>Française
-                    </p>
+                    <a href="https://data.economie.gouv.fr/pages/accueil/" title="Retour à l'accueil - data.economie.gouv.fr">
+                        <p class="fr-logo">
+                            Gouvernement
+                        </p>
+                    </a>
                 </div>
                 <div class="fr-footer__content">
                     <p class="fr-footer__content-desc">
@@ -176,19 +209,19 @@
             <div class="fr-footer__bottom">
                 <ul class="fr-footer__bottom-list">
                     <li class="fr-footer__bottom-item">
-                        <a class="fr-footer__bottom-link" href="mailto:contact.dataeconomie@finances.gouv.fr">Contact</a>
+                        <a class="fr-footer__bottom-link" href="https://data.economie.gouv.fr/pages/plandusite/">Plan du site</a>
                     </li>
                     <li class="fr-footer__bottom-item">
-                        <a class="fr-footer__bottom-link" href="#">Accessibilité : non conforme</a>
+                        <a class="fr-footer__bottom-link" href="https://data.economie.gouv.fr/pages/accessibilite/">Accessibilité : partiellement conforme</a>
                     </li>
                     <li class="fr-footer__bottom-item">
-                        <a class="fr-footer__bottom-link" href="#">Mentions légales</a>
+                        <a class="fr-footer__bottom-link" href="https://data.economie.gouv.fr/terms/terms-and-conditions/">Mentions légales</a>
                     </li>
                     <li class="fr-footer__bottom-item">
-                        <a class="fr-footer__bottom-link" href="#">Données personnelles</a>
+                        <a class="fr-footer__bottom-link" href="https://data.economie.gouv.fr/terms/privacy-policy/">Données personnelles</a>
                     </li>
                     <li class="fr-footer__bottom-item">
-                        <a class="fr-footer__bottom-link" href="#">Licence Ouverte 2.0</a>
+                        <a class="fr-footer__bottom-link" href="https://data.economie.gouv.fr/pages/contact0">Contact</a>
                     </li>
                 </ul>
                 <div class="fr-footer__bottom-copy">
