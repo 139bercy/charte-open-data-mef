@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr" data-fr-scheme="system">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Charte Open Data des ministères économiques et financiers - Politique d'usage de la plateforme data.economie.gouv.fr">
+    <meta name="author" content="SG/SNUM/Bercy Hub">
+    <title>{{title}} - Version {{version}}</title>
+    <script>
+        (function() {
+            const storedScheme = localStorage.getItem('scheme');
+            if (storedScheme) {
+                document.documentElement.setAttribute('data-fr-scheme', storedScheme);
+            }
+        })();
+    </script>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/favicon/favicon.png">
+    <link rel="manifest" href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/favicon/manifest.webmanifest">
+
+    <!-- CSS DSFR -->
+    <link href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/utility/utility.min.css" rel="stylesheet">
+
+    <style>
+        .fr-sidemenu {
+            position: sticky;
+            top: 2rem;
+            max-height: calc(100vh - 4rem);
+            overflow-y: auto;
+        }
+        /* Custom layout adjustments */
+        main {
+            padding-top: 2rem;
+            padding-bottom: 4rem;
+        }
+        /* Ensure tables look good */
+        .fr-table {
+            margin-bottom: 2rem;
+            width: 100%;
+        }
+        /* Style markdown blocks nicely */
+        .charte-content h2 {
+            margin-top: 3rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-default-grey);
+        }
+        .charte-content h3 {
+            margin-top: 2rem;
+        }
+        .charte-content blockquote {
+            border-left: 4px solid var(--border-active-blue-france);
+            background-color: var(--background-alt-grey);
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .charte-content blockquote p {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header role="banner" class="fr-header">
+        <div class="fr-header__body">
+            <div class="fr-container">
+                <div class="fr-header__body-row">
+                    <div class="fr-header__brand fr-enlarge-link">
+                        <div class="fr-header__brand-top">
+                            <div class="fr-header__logo">
+                                <p class="fr-logo">
+                                    République<br>Française
+                                </p>
+                            </div>
+                            <div class="fr-header__navbar">
+                                <button class="fr-btn--display fr-btn" aria-controls="fr-theme-modal" data-fr-opened="false" title="Paramètres d'affichage" id="button-display-mobile">
+                                    Paramètres d'affichage
+                                </button>
+                            </div>
+                        </div>
+                        <div class="fr-header__service">
+                            <a href="https://data.economie.gouv.fr" title="Accueil - data.economie.gouv.fr">
+                                <p class="fr-header__service-title">data.economie.gouv.fr</p>
+                            </a>
+                            <p class="fr-header__service-tagline">La plateforme Open Data des ministères économiques et financiers</p>
+                        </div>
+                    </div>
+                    <div class="fr-header__tools">
+                        <div class="fr-header__tools-links">
+                            <ul class="fr-links-group">
+                                <li>
+                                    <button class="fr-btn--display fr-btn" aria-controls="fr-theme-modal" data-fr-opened="false" title="Paramètres d'affichage" id="button-display-desktop">
+                                        Paramètres d'affichage
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="fr-container">
+        <nav role="navigation" class="fr-breadcrumb" aria-label="Vous êtes ici :">
+            <button class="fr-breadcrumb__button" aria-expanded="false" aria-controls="breadcrumb-1">Voir le fil d'Ariane</button>
+            <div class="fr-collapse" id="breadcrumb-1">
+                <ol class="fr-breadcrumb__list">
+                    <li>
+                        <a class="fr-breadcrumb__link" href="https://data.economie.gouv.fr">Accueil</a>
+                    </li>
+                    <li>
+                        <a class="fr-breadcrumb__link" aria-current="page">{{title}}</a>
+                    </li>
+                </ol>
+            </div>
+        </nav>
+    </div>
+
+    <main id="content" role="main">
+        <div class="fr-container">
+            <div class="fr-grid-row fr-grid-row--gutters">
+                <!-- Navigation latérale (TOC) -->
+                <nav class="fr-col-12 fr-col-md-4" role="navigation" aria-label="Menu latéral">
+                    <div class="fr-sidemenu" id="sidemenu">
+                        <div class="fr-sidemenu__inner">
+                            <button class="fr-sidemenu__btn" aria-controls="fr-sidemenu-wrapper" aria-expanded="false">Dans cette rubrique</button>
+                            <div class="fr-collapse" id="fr-sidemenu-wrapper">
+                                <div class="fr-sidemenu__title">Table des matières</div>
+                                {{toc}}
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Contenu principal -->
+                <div class="fr-col-12 fr-col-md-8 charte-content">
+                    <div class="fr-mb-4v">
+                        <p class="fr-badge fr-badge--info fr-badge--no-icon">Version {{version}}</p>
+                    </div>
+                    {{body}}
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="fr-footer" role="contentinfo" id="footer">
+        <div class="fr-container">
+            <div class="fr-footer__body">
+                <div class="fr-footer__brand fr-enlarge-link">
+                    <p class="fr-logo">
+                        République<br>Française
+                    </p>
+                </div>
+                <div class="fr-footer__content">
+                    <p class="fr-footer__content-desc">
+                        Ce document établit le cadre de référence pour la publication et la gestion des données ouvertes au sein des ministères économiques et financiers français.
+                    </p>
+                    <ul class="fr-footer__content-list">
+                        <li>
+                            <a class="fr-footer__content-link" target="_blank" href="https://legifrance.gouv.fr">legifrance.gouv.fr</a>
+                        </li>
+                        <li>
+                            <a class="fr-footer__content-link" target="_blank" href="https://gouvernement.fr">gouvernement.fr</a>
+                        </li>
+                        <li>
+                            <a class="fr-footer__content-link" target="_blank" href="https://service-public.fr">service-public.fr</a>
+                        </li>
+                        <li>
+                            <a class="fr-footer__content-link" target="_blank" href="https://data.gouv.fr">data.gouv.fr</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fr-footer__bottom">
+                <ul class="fr-footer__bottom-list">
+                    <li class="fr-footer__bottom-item">
+                        <a class="fr-footer__bottom-link" href="mailto:contact.dataeconomie@finances.gouv.fr">Contact</a>
+                    </li>
+                    <li class="fr-footer__bottom-item">
+                        <a class="fr-footer__bottom-link" href="#">Accessibilité : non conforme</a>
+                    </li>
+                    <li class="fr-footer__bottom-item">
+                        <a class="fr-footer__bottom-link" href="#">Mentions légales</a>
+                    </li>
+                    <li class="fr-footer__bottom-item">
+                        <a class="fr-footer__bottom-link" href="#">Données personnelles</a>
+                    </li>
+                    <li class="fr-footer__bottom-item">
+                        <a class="fr-footer__bottom-link" href="#">Licence Ouverte 2.0</a>
+                    </li>
+                </ul>
+                <div class="fr-footer__bottom-copy">
+                    <p>Sauf mention contraire, tous les contenus de ce site sont sous <a href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" target="_blank">licence ouverte 2.0</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modale d'affichage (Thème) -->
+    <dialog id="fr-theme-modal" class="fr-modal" role="dialog" aria-labelledby="fr-theme-modal-title">
+        <div class="fr-container fr-container--fluid fr-container-md">
+            <div class="fr-grid-row fr-grid-row--center">
+                <div class="fr-col-12 fr-col-md-6 fr-col-lg-4">
+                    <div class="fr-modal__body">
+                        <div class="fr-modal__header">
+                            <button class="fr-btn--close fr-btn" aria-controls="fr-theme-modal" title="Fermer">Fermer</button>
+                        </div>
+                        <div class="fr-modal__content">
+                            <h1 id="fr-theme-modal-title" class="fr-modal__title">Paramètres d'affichage</h1>
+                            <div id="fr-display" class="fr-display">
+                                <fieldset class="fr-fieldset" id="display-fieldset">
+                                    <legend class="fr-fieldset__legend--regular fr-fieldset__legend" id="display-fieldset-legend">
+                                        Choisissez un thème pour personnaliser l'apparence du site.
+                                    </legend>
+                                    <div class="fr-fieldset__content">
+                                        <div class="fr-fieldset__element">
+                                            <div class="fr-radio-group fr-radio-rich">
+                                                <input type="radio" id="fr-radios-theme-light" name="fr-radios-theme" value="light">
+                                                <label class="fr-label" for="fr-radios-theme-light">
+                                                    Thème clair
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="fr-fieldset__element">
+                                            <div class="fr-radio-group fr-radio-rich">
+                                                <input type="radio" id="fr-radios-theme-dark" name="fr-radios-theme" value="dark">
+                                                <label class="fr-label" for="fr-radios-theme-dark">
+                                                    Thème sombre
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="fr-fieldset__element">
+                                            <div class="fr-radio-group fr-radio-rich">
+                                                <input type="radio" id="fr-radios-theme-system" name="fr-radios-theme" value="system">
+                                                <label class="fr-label" for="fr-radios-theme-system">
+                                                    Système (par défaut)
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- JS DSFR -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.module.min.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@gouvfr/dsfr@1.14.4/dist/dsfr/dsfr.nomodule.min.js"></script>
+</body>
+</html>

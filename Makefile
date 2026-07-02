@@ -39,7 +39,10 @@ format:
 	mdformat src
 	./scripts/fix-backslashes.sh src/main.md
 
-release:
+html:
+	python3 scripts/build_html.py
+
+release: html
 	./scripts/release.sh src/main.md
 
 template:

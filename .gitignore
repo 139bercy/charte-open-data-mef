@@ -183,8 +183,5 @@ pyrightconfig.json
 
 ## Output files
 
-build/*.docx
-build/*.odt
-build/*.pdf
-build/*.tex
+build/
 dev

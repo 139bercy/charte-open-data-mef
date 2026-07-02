@@ -433,37 +433,25 @@ ______________________________________________________________________
 
 ### Testes juridiques
 
-\*\*Loi pour une république numérique : https://www.economie.gouv.fr/files/files/PDF/DP_LoiNumerique.pdf
+**Loi pour une république numérique** : https://www.economie.gouv.fr/files/files/PDF/DP_LoiNumerique.pdf
 
 ### Documentation technique
 
 **Publier un jeu de données** : https://userguide.opendatasoft.com/fr/articles/2248514
 
-\centering ![](./src/media/faq-publish-dataset.png){width=50px} \raggedright \flushleft
-
 **Remplir les métadonnées** : https://userguide.opendatasoft.com/fr/articles/2031938
-
-\centering ![](./src/media/faq-fill-metadata.png){width=50px} \raggedright \flushleft
 
 ### Métadonnées
 
 **DCAT** : https://doc.data.gouv.fr/moissonnage/dcat/
 
-\centering ![](./src/media/faq-dcat.png){width=50px} \raggedright \flushleft
-
 **Datasheets for datasets** : https://open.datactivist.coop/docs/datasheets-datasets
-
-\centering ![](./src/media/faq-datasheets-for-datasets.png){width=50px} \raggedright \flushleft
 
 ### Acculturation à la donnée
 
 Lab Archipel - DATAcculturation : https://www.youtube.com/watch?v=_yxlo41dBuA
 
-\centering ![](./src/media/faq-lab-archipel-dataculturation.png){width=50px} \raggedright \flushleft
-
 Open Data France : https://opendatafrance.fr/les-ressources/
-
-\centering ![](./src/media/faq-opendatafrance-resources.png){width=50px} \raggedright \flushleft
 
 [Datactivist - Blog](https://open.datactivist.coop/docs) : https://open.datactivist.coop/docs
 
