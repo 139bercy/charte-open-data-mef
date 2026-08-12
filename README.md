@@ -14,7 +14,9 @@ En responsabilisant les producteurs de données sur la clarté des métadonnées
 
 ## Usage
 
-Le document est téléchargeable [ici](https://github.com/139bercy/charte-open-data-mef/releases) au format `PDF` ainsi qu'au format `DOCX`.
+Retrouvez ce document en ligne à l'adresse suivante : [https://139bercy.github.io/charte-open-data-mef/](https://139bercy.github.io/charte-open-data-mef/).
+
+Le document est également téléchargeable [ici](https://github.com/139bercy/charte-open-data-mef/releases) au format `PDF` ainsi qu'au format `DOCX`.
 
 La version de la `release` en cours est sur la branche `main`, la version de travail en cours de modification est sur la branche `develop`.
 

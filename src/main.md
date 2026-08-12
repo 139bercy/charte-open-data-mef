@@ -1,4 +1,4 @@
-# Charte Open Data des ministères économiques et financiers
+# Charte ministérielle pour l'ouverture des données publiques (Open Data)
 
 ## Table
 
