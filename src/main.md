@@ -473,3 +473,5 @@ ______________________________________________________________________
 - Dans Excel, "Enregistrer sous" et sélectionner "CSV (séparateur: point-virgule)"
 - Vérifier l'encodage UTF-8 lors de l'enregistrement
 - Contrôler que le séparateur choisi (virgule ou point-virgule) ne crée pas d'erreurs de restitution.
+
+**Source** : [https://github.com/139bercy/charte-open-data-mef](https://github.com/139bercy/charte-open-data-mef)
